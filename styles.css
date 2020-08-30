@@ -1,0 +1,346 @@
+/* base styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 20px;
+  background-color: #010101;
+  overflow: none;
+}
+
+/* gridbox */
+
+.gridcontainer {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "box1 box1 box1 box1"
+    "box2 box3 box4 box5";
+}
+
+/* hero image */
+
+.mainimage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: box1;
+  color: #ffffff;
+  height: 60vh;
+  z-index: 3;
+}
+
+.mainimage h1 {
+  text-align: center;
+  line-height: 0.8;
+  z-index: 1;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.mainimage img {
+  width: 1000px;
+}
+
+/* game on text span */
+span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-bottom: #e11b23 2px solid;
+}
+
+.preorder {
+  position: absolute;
+  font-size: 1.2rem;
+  z-index: 1;
+  right: 20%;
+  bottom: 50%;
+  background-color: #e11b23;
+  border: 8px #e11b22 solid;
+  width: 170px;
+  border-radius: 5px;
+  text-align: center !important;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.eightk img,
+.onehundredaf img,
+.nocrop img,
+.humananimalaf img {
+  width: 84px;
+  z-index: 4;
+}
+
+/* specs panels */
+
+.eightk,
+.onehundredaf,
+.nocrop,
+.humananimalaf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  z-index: 5;
+  text-align: center;
+}
+
+.eightk {
+  grid-area: box2;
+}
+
+.onehundredaf {
+  grid-area: box3;
+}
+
+.nocrop {
+  grid-area: box4;
+}
+
+.humananimalaf {
+  grid-area: box5;
+}
+
+h3 {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+p {
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 1024px) {
+  .mainimage h1 {
+    left: 15%;
+    top: 15%;
+    font-size: 2.8rem;
+  }
+
+  .mainimage img {
+    width: 800px;
+  }
+
+  .preorder {
+    right: 16%;
+  }
+
+  h3 {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gridcontainer {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "box1 box1"
+      "box2 box3"
+      "box4 box5";
+  }
+
+  .mainimage {
+    height: 55vh;
+  }
+
+  .mainimage h1 {
+    left: 10%;
+    top: 15%;
+    font-size: 2rem;
+  }
+
+  /* game on text span */
+  span {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .mainimage img {
+    width: 600px;
+  }
+
+  .eightk img,
+  .onehundredaf img,
+  .nocrop img,
+  .humananimalaf img {
+    width: 82px;
+  }
+
+  .preorder {
+    right: 10%;
+    bottom: 55%;
+    width: 140px;
+    font-size: 0.8rem;
+  }
+
+  h3 {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .mainimage {
+    height: 40vh;
+  }
+
+  .mainimage img {
+    width: 400px;
+  }
+
+  .mainimage h1 {
+    left: 1%;
+    top: 18%;
+    font-size: 1.5rem;
+  }
+
+  /* game on text span */
+  span {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .eightk img,
+  .onehundredaf img,
+  .nocrop img,
+  .humananimalaf img {
+    width: 70px;
+  }
+
+  .preorder {
+    right: 2%;
+    bottom: 70%;
+    width: 100px;
+    font-size: 0.7rem;
+  }
+
+  h3 {
+    font-size: 14px;
+    padding: 1px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .mainimage {
+    height: 35vh;
+  }
+
+  .mainimage img {
+    width: 350px;
+  }
+
+  .mainimage h1 {
+    left: 1%;
+    top: 14%;
+    font-size: 1.2rem;
+  }
+
+  /* game on text span */
+  span {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .eightk img,
+  .onehundredaf img,
+  .nocrop img,
+  .humananimalaf img {
+    width: 60px;
+  }
+
+  .preorder {
+    right: 1%;
+    bottom: 70%;
+    width: 80px;
+    font-size: 0.6rem;
+  }
+
+  h3 {
+    font-size: 12px;
+    padding: 1px;
+  }
+
+  p {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .mainimage {
+    height: 30vh;
+  }
+
+  .mainimage img {
+    width: 280px;
+  }
+
+  .mainimage h1 {
+    left: 1%;
+    top: 12.5%;
+    font-size: 0.8rem;
+  }
+
+  /* game on text span */
+  span {
+    font-size: 0.6rem;
+    font-weight: 300;
+  }
+
+  .eightk img,
+  .onehundredaf img,
+  .nocrop img,
+  .humananimalaf img {
+    width: 50px;
+  }
+
+  .preorder {
+    right: 1%;
+    bottom: 76%;
+    width: 70px;
+    font-size: 0.5rem;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 8px;
+    padding: 3px;
+  }
+}
